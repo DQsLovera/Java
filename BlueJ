@@ -1,0 +1,4 @@
+Two ways to clear the terminal in BlueJ
+1: click "option" button on the terminal window, and click "clear"
+   btw, if you want to clear the screen after every method called, tick "Clear screen at method call" option.
+2: system.out.println("'\u000C'");

@@ -1,0 +1,30 @@
+1、创建属于自己的链表
+class ListNode{
+  int val;
+  ListNode next;
+  
+  ListNode(int val){
+  this.val = val;
+  }
+}
+
+注意：这里的class和method的名字同为ListNode，因为这里用的是一个special method(constructor),用来初始化所有属于ListNode这个类的objects（怕自己忘了基本知识2333）
+
+2、如何使用单项链表（看一段代码，不要怕看代码）
+class Example{
+  public static void main(Stirng[] args){
+    //dummpyHead非常有用，可以帮助你避免不必要的遍历过程，而且同时可以保住表头防止错误操作修改链表数据（我是这么理解的）
+    ListNode dummpyHead = new ListNode(0);
+    
+    //这里的newList，在主观意义上是你要操作的链表，但它的实质性质是一个temporary list，这样就避免了修改dummpyHead
+    //这样在进行插入其它链表，删除节点等操作的时候，可以方便我们随时找到表头。
+    ListNode newList = dummpyHead;
+    
+    //假设现在有一些其他的节点需要接入
+    ListNode newElement = new ListNode(1);
+    newList.next = newElement;
+  }
+}
+详细例子可以参考LeetCode中的一道简单题：https://leetcode-cn.com/problems/merge-two-sorted-lists/comments/
+    
+    
